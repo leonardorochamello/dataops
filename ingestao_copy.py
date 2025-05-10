@@ -107,7 +107,8 @@ def ingestao():
         driver.get(url)
         esperar_selecao_ano(driver)
         lista_anos = coletar_lista_selecao_anos(driver)
-        dicionario_links = coletar_links_dados(driver, lista_anos)
+        lista_anos_filtrados = lista_anos[:2]
+        dicionario_links = coletar_links_dados(driver, lista_anos_filtrados)
 
     finally:
         driver.quit()
